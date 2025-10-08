@@ -20,7 +20,7 @@ if uploaded_file:
 
     retriever = vectordb.as_retriever()
 
-    llm = ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=GROQ_API_KEY)
+    llm = ChatGroq(model="llama-3.3-70b-versatile",)
 
     qa = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
 
