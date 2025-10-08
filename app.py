@@ -7,7 +7,8 @@ st.set_page_config(page_title="RAG Demo", page_icon="✨")
 
 st.title("RAG Demo App")
 st.write("Upload a PDF, then ask questions about it!")
-  
+
+GROQ_API_KEY = "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"  
 
 
 uploaded_file = st.file_uploader("Upload a PDF", type=["pdf"])
@@ -20,7 +21,7 @@ if uploaded_file:
 
     retriever = vectordb.as_retriever()
 
-    llm = ChatGroq(model="llama-3.3-70b-versatile",)
+    llm = ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=GROQ_API_KEY)
 
     qa = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
 
