@@ -7,7 +7,7 @@ st.set_page_config(page_title="RAG Demo", page_icon="✨")
 
 st.title("RAG Demo App")
 st.write("Upload a PDF, then ask questions about it!")
-
+  
 
 
 uploaded_file = st.file_uploader("Upload a PDF", type=["pdf"])
