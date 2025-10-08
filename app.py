@@ -8,7 +8,7 @@ st.set_page_config(page_title="RAG Demo", page_icon="✨")
 st.title("RAG Demo App")
 st.write("Upload a PDF, then ask questions about it!")
 
-GROQ_API_KEY = "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"  
+GROQ_API_KEY = ""  
 
 
 uploaded_file = st.file_uploader("Upload a PDF", type=["pdf"])
